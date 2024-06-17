@@ -1,0 +1,36 @@
+{
+  "name": "babylon-html-label",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "Bhushan Wagh (https://github.com/bhushan6)",
+  "bugs": {
+    "url": "https://github.com/bhushan6/babylon-html-labe/issues"
+  },
+  "homepage": "https://github.com/bhushan6/babylon-html-labe#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc & vite build",
+    "publish:patch": "npm version patch && npm run build && npm publish",
+    "publish:minor": "npm version minor && npm run build && npm publish",
+    "publish:major": "npm version major && npm run build && npm publish",
+    "preview": "vite preview"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/babylon-html-label.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/babylon-html-label.es.js"
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^7.11.1"
+  }
+}
