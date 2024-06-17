@@ -1,17 +1,14 @@
 import {
-  AbstractMesh,
   ArcRotateCamera,
   Engine,
   Matrix,
   MeshBuilder,
   Nullable,
   Scene,
-  SceneLoader,
   UniversalCamera,
   Vector3,
 } from "@babylonjs/core";
 
-//@ts-expect-error
 import { HTML2DLabel } from "babylon-html-label";
 
 export class Experience {
@@ -28,14 +25,11 @@ export class Experience {
     this._engine = new Engine(this._canvas, true);
     this.scene = new Scene(this._engine);
 
-    this.initUniversalCamera({});
-
     this.scene.createDefaultLight();
 
     this.pointerDownEvent(this.scene);
 
-    // this.initArcRotateCamera({});
-    this.initUniversalCamera({});
+    this.initArcRotateCamera({});
 
     const box = MeshBuilder.CreateBox("box", { size: 1 }, this.scene);
 
@@ -103,8 +97,6 @@ export class Experience {
       if (!hit?.pickedMesh) {
         return;
       }
-
-      console.log({ meshName: hit.pickedMesh.name, hit });
     };
   };
 
@@ -118,17 +110,6 @@ export class Experience {
       position || new Vector3(0, 0, 0),
       this.scene
     );
-    this._camera.attachControl();
-  };
-
-  private initUniversalCamera = ({ position }: { position?: Vector3 }) => {
-    this._camera?.dispose();
-    this._camera = new UniversalCamera(
-      "Camera",
-      position || new Vector3(0, 0, -4),
-      this.scene
-    );
-    this._camera.speed = 0.2;
     this._camera.attachControl();
   };
 }
