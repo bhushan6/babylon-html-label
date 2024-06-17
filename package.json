@@ -4,9 +4,9 @@
   "type": "module",
   "author": "Bhushan Wagh (https://github.com/bhushan6)",
   "bugs": {
-    "url": "https://github.com/bhushan6/babylon-html-labe/issues"
+    "url": "https://github.com/bhushan6/babylon-html-label/issues"
   },
-  "homepage": "https://github.com/bhushan6/babylon-html-labe#readme",
+  "homepage": "https://github.com/bhushan6/babylon-html-label#readme",
   "scripts": {
     "dev": "vite",
     "build": "tsc & vite build",
