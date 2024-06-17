@@ -1,6 +1,6 @@
 # Babylon-html-label
 
-`Babylon-html-label` is a library for Babylon.js that allows you to create HTML elements synchronized with 3D positions within the scene. This can be useful for labels, tooltips, or any HTML content that needs to follow a 3D object.
+`Babylon-html-label` is a library for Babylon.js that allows you to create HTML elements synchronized with 3D positions within the scene. This can be useful for labels, tooltips, or any HTML content that needs to follow a 3D object. [Live Demo](https://babylon-html-label.vercel.app/)
 
 ## Installation
 

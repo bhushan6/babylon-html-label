@@ -117,7 +117,7 @@ export class HTML2DLabel extends AbstractMesh {
     return { px, py, scale };
   };
 
-  public attachUIToMesh = (root: HTMLElement, onCameraMoveOnly?: boolean) => {
+  private attachUIToMesh = (root: HTMLElement, onCameraMoveOnly?: boolean) => {
     const camera = this._scene.activeCamera;
 
     if (!camera) {
